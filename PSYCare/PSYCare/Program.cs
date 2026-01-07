@@ -1,5 +1,3 @@
-using FirebaseAdmin;
-using Google.Apis.Auth.OAuth2;
 using Microsoft.EntityFrameworkCore;
 using PSYCare.Database;
 using PSYCare.Services;
