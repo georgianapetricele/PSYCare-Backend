@@ -4,9 +4,9 @@ using PSYCare.Database.Entities;
 
 namespace PSYCare.Database.Configurations;
 
-public class UserConfiguration : IEntityTypeConfiguration<User>
+public class UserConfiguration : IEntityTypeConfiguration<Pacient>
 {
-    public void Configure(EntityTypeBuilder<User> builder)
+    public void Configure(EntityTypeBuilder<Pacient> builder)
     {
 
         builder.Property(x => x.Email)
