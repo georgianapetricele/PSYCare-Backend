@@ -10,7 +10,9 @@ public class PSYCareDbContext : DbContext
     {
     }
 
-    public DbSet<User> Users { get; set; }
+    public DbSet<Pacient> Pacients { get; set; }
+
+    public DbSet<Psychologist> Psychologists { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
