@@ -30,11 +30,11 @@ public class PatientsController: ControllerBase
             Age = request.Age
         };
 
-        var pacient = await _patientsService.CreatePatientAsync(user);
+        var patient = await _patientsService.CreatePatientAsync(user);
         return Ok(new
         {
-            type = "pacient",
-            data = pacient
+            type = "patient",
+            data = patient
         });
     }
 

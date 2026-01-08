@@ -15,11 +15,11 @@ public class AuthService: IAuthService
 
     public async Task<object?> LoginAsync(string email, string password)
     {
-        var pacient = await _context.Patients
+        var patient = await _context.Patients
             .FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
 
-        if (pacient != null)
-            return new { role = "pacient", data = pacient };
+        if (patient != null)
+            return new { role = "patient", data = patient };
 
         var psychologist = await _context.Psychologists
             .FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
