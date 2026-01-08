@@ -22,6 +22,7 @@ builder.Services.AddDbContext<PSYCareDbContext>(options =>
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IPatientsService, PatientsService>();
 builder.Services.AddScoped<IPsychologistsService, PsychologistsService>();
+builder.Services.AddScoped<IMoodService, MoodService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
