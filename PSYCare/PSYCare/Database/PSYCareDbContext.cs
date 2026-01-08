@@ -11,8 +11,8 @@ public class PSYCareDbContext : DbContext
     }
 
     public DbSet<Patient> Patients { get; set; }
-
     public DbSet<Psychologist> Psychologists { get; set; }
+    public DbSet<MoodEntry> MoodEntries { get; set; } = default!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -21,5 +21,23 @@ public class PSYCareDbContext : DbContext
         modelBuilder.ApplyConfigurationsFromAssembly(
             typeof(PSYCareDbContext).Assembly
         );
+
+        modelBuilder.Entity<MoodEntry>(b =>
+        {
+            b.ToTable("mood_entries");
+            b.HasKey(x => x.Id);
+
+            b.Property(x => x.Score).IsRequired();
+
+            b.Property(x => x.CreatedAt)
+                .HasDefaultValueSql("now()");
+
+            b.HasIndex(x => new { x.PatientId, x.CreatedAt });
+
+            b.HasOne(x => x.Patient)
+                .WithMany(p => p.MoodEntries)
+                .HasForeignKey(x => x.PatientId)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
     }
 }
