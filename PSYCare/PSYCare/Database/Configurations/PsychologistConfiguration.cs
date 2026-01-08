@@ -4,9 +4,9 @@ using PSYCare.Database.Entities;
 
 namespace PSYCare.Database.Configurations;
 
-public class UserConfiguration : IEntityTypeConfiguration<Pacient>
+public class PsychologistConfiguration: IEntityTypeConfiguration<Psychologist>
 {
-    public void Configure(EntityTypeBuilder<Pacient> builder)
+    public void Configure(EntityTypeBuilder<Psychologist> builder)
     {
 
         builder.Property(x => x.Email)
@@ -19,5 +19,11 @@ public class UserConfiguration : IEntityTypeConfiguration<Pacient>
         builder.Property(x => x.Name)
                 .IsRequired()
                 .HasMaxLength(100);
+
+        builder.HasMany(p => p.Patients)
+           .WithOne(patient => patient.Psychologist)
+           .HasForeignKey(patient => patient.PsychologistId)
+           .IsRequired(false);
     }
 }
+

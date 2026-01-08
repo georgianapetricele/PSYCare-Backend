@@ -9,6 +9,6 @@
         public string? Location { get; set; }
 
         // Navigation property: one psychologist can have many patients
-        public ICollection<Pacient> Pacients { get; set; } = new List<Pacient>();
+        public ICollection<Patient> Patients { get; set; } = new List<Patient>();
     }
 }
