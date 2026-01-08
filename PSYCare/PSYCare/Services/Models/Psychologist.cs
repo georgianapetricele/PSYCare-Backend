@@ -8,6 +8,6 @@
         public string Password { get; set; }
         public string? Location { get; set; }
 
-        public List<Pacient> Pacients { get; set; } = new List<Pacient>();
+        public List<Patient> Pacients { get; set; } = new List<Patient>();
     }
 }

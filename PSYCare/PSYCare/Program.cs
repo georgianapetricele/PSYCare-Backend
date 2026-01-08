@@ -3,6 +3,7 @@ using PSYCare.Database;
 using PSYCare.Services;
 using PSYCare.Services.Interfaces;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
@@ -18,7 +19,9 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<PSYCareDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IUsersService, UsersService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IPatientsService, PatientsService>();
+builder.Services.AddScoped<IPsychologistsService, PsychologistsService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
