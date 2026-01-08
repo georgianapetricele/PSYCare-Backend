@@ -29,6 +29,7 @@ public class PatientsService: IPatientsService
             Name = dbUser.Name,
             PhoneNumber = dbUser.PhoneNumber,
             Location = dbUser.Location,
+            PsychologistId = dbUser.PsychologistId,
             IssueDescription = dbUser.IssueDescription,
             Age = dbUser.Age
         };
