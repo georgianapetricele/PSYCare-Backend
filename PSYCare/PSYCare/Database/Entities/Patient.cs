@@ -14,4 +14,5 @@ public class Patient
 
     public Psychologist? Psychologist { get; set; }
     public ICollection<MoodEntry> MoodEntries { get; set; } = new List<MoodEntry>();
+    public ICollection<JournalEntry> JournalEntries { get; set; } = new List<JournalEntry>();
 }
