@@ -13,6 +13,7 @@ public class PSYCareDbContext : DbContext
     public DbSet<Patient> Patients { get; set; }
     public DbSet<Psychologist> Psychologists { get; set; }
     public DbSet<MoodEntry> MoodEntries { get; set; } = default!;
+    public DbSet<Session> Sessions { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
