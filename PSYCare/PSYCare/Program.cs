@@ -26,6 +26,7 @@ builder.Services.AddScoped<IPatientsService, PatientsService>();
 builder.Services.AddScoped<IPsychologistsService, PsychologistsService>();
 builder.Services.AddScoped<IMoodService, MoodService>();
 builder.Services.AddScoped<ISessionService, SessionService>();
+builder.Services.AddScoped<IJournalService, JournalService>();
 builder.Services.AddSingleton<IWebSocketService, WebSocketService>();
 
 builder.Services.AddControllers();
