@@ -88,11 +88,11 @@ public class PatientsController: ControllerBase
     }
 
     [HttpDelete("{patientId}/moods/{moodId}")]
-    public async Task<IActionResult> DeleteMood(int patientId, int journalId)
+    public async Task<IActionResult> DeleteMood(int patientId, int moodId)
     {
         try
         {
-            await _moodService.DeleteAsync(patientId, journalId);
+            await _moodService.DeleteAsync(patientId, moodId);
             return NoContent();
         }
         catch (KeyNotFoundException ex)
