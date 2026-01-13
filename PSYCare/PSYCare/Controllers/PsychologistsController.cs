@@ -35,4 +35,22 @@ public class PsychologistsController: ControllerBase
             data = psychologist
         });
     }
+
+    [HttpGet("{psychologistId}/get-patients")]
+    public async Task<IActionResult> GetPatientsForPsychologist(int psychologistId)
+    {
+        var patients = await _psychologistsService.GetPatientsForPsychologist(psychologistId);
+        if (patients == null)
+        {
+            return NotFound();
+        }
+        return Ok(patients);
+    }
+
+    [HttpGet("get-all")]
+    public async Task<IActionResult> GetAllPsychologists()
+    {
+        var psychologists = await _psychologistsService.GetAllPsychologistsAsync();
+        return Ok(psychologists);
+    }
 }

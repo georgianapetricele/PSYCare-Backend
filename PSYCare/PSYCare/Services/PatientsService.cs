@@ -1,11 +1,13 @@
-﻿using PSYCare.Database;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
+using PSYCare.Database;
 using PSYCare.Services.Interfaces;
 using PSYCare.Services.Models;
 using DbPatient = PSYCare.Database.Entities.Patient;
 
 namespace PSYCare.Services;
 
-public class PatientsService: IPatientsService
+public class PatientsService : IPatientsService
 {
     private readonly PSYCareDbContext _context;
 
@@ -61,5 +63,44 @@ public class PatientsService: IPatientsService
             IssueDescription = dbUser.IssueDescription,
             Age = dbUser.Age
         };
+    }
+
+    public async Task<Psychologist?> GetPsychologistForPatientAsync(int patientId)
+    {
+        var psychologist = await _context.Patients
+            .Where(p => p.Id == patientId)
+            .Select(p => p.Psychologist)
+            .FirstOrDefaultAsync();
+
+        if (psychologist == null)
+            return null;
+
+        return new Psychologist
+        {
+            Email = psychologist.Email,
+            Name = psychologist.Name,
+            Location = psychologist.Location
+        };
+    }
+    public async Task<bool> AssignPsychologistToPatientAsync(int patientId, string psychologistEmail)
+    {
+        var patient = await _context.Patients.FindAsync(patientId);
+        if (patient == null)
+        {
+            return false;
+        }
+
+        var psychologist = await _context.Psychologists
+            .FirstOrDefaultAsync(p => p.Email == psychologistEmail);
+
+        if (psychologist == null)
+        {
+            return false;
+        }
+
+        patient.PsychologistId = psychologist.Id;
+        await _context.SaveChangesAsync();
+
+        return true;
     }
 }

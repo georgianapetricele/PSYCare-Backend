@@ -41,6 +41,31 @@ public class PatientsController: ControllerBase
         });
     }
 
+    [HttpGet("{patientId}/get-psychologist")]
+    public async Task<IActionResult> GetPsychologistForPatient(int patientId)
+    {
+        var psychologist = await _patientsService.GetPsychologistForPatientAsync(patientId);
+        if (psychologist == null)
+        {
+            return NotFound();
+        }
+        return Ok(psychologist);
+    }
+
+    [HttpPost("{patientId}/assign-psychologist")]
+    public async Task<IActionResult> AssignPsychologistToPatient(int patientId, [FromBody] AssignPsychologistRequest request)
+    {
+        var psychologistEmail = request.PsychologistEmail;
+        var ok = await _patientsService.AssignPsychologistToPatientAsync(patientId, psychologistEmail);
+        
+        if (!ok)
+        {
+            return NotFound("Patient or Psychologist not found.");
+        }
+
+        return Ok(new { message = "Psychologist assigned successfully." });
+    }
+
     [HttpPost("{patientId}/moods")]
     public async Task<ActionResult<MoodEntryResponseDto>> CreateMood(int patientId, [FromBody] MoodEntryCreateDto dto)
     {
