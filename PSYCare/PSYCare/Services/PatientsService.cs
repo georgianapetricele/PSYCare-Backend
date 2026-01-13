@@ -33,6 +33,8 @@ public class PatientsService : IPatientsService
             Location = dbUser.Location,
             PsychologistId = dbUser.PsychologistId,
             IssueDescription = dbUser.IssueDescription,
+            Diagnosis = dbUser.Diagnosis,
+            PsychologistNotes = dbUser.PsychologistNotes,
             Age = dbUser.Age
         };
     }
@@ -83,6 +85,19 @@ public class PatientsService : IPatientsService
             Location = psychologist.Location
         };
     }
+
+    public async Task<bool> DeletePatientAsync(int patientId)
+    {
+        var patient = await _context.Patients.FindAsync(patientId);
+        if (patient == null)
+        {
+            return false;
+        }
+        patient.PsychologistId = null;
+        await _context.SaveChangesAsync();
+        return true;
+    }
+
     public async Task<bool> AssignPsychologistToPatientAsync(int patientId, string psychologistEmail)
     {
         var patient = await _context.Patients.FindAsync(patientId);

@@ -8,4 +8,5 @@ public interface IPatientsService
     Task<Patient?> CreatePatientAsync(Patient user);
     Task<Psychologist?> GetPsychologistForPatientAsync(int patientId);
     Task<bool> AssignPsychologistToPatientAsync(int patientId, string psychologistEmail);
+    Task<bool> DeletePatientAsync(int patientId);
 }
