@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PSYCare.Database;
@@ -11,9 +12,11 @@ using PSYCare.Database;
 namespace PSYCare.Migrations
 {
     [DbContext(typeof(PSYCareDbContext))]
-    partial class PSYCareDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260110190005_AddSessionsTable")]
+    partial class AddSessionsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,30 +24,6 @@ namespace PSYCare.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("PSYCare.Database.Entities.JournalEntry", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTimeOffset>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("PatientId")
-                        .HasColumnType("integer");
-
-                    b.Property<string>("Text")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PatientId");
-
-                    b.ToTable("JournalEntries");
-                });
 
             modelBuilder.Entity("PSYCare.Database.Entities.MoodEntry", b =>
                 {
@@ -192,17 +171,6 @@ namespace PSYCare.Migrations
                     b.ToTable("Sessions");
                 });
 
-            modelBuilder.Entity("PSYCare.Database.Entities.JournalEntry", b =>
-                {
-                    b.HasOne("PSYCare.Database.Entities.Patient", "Patient")
-                        .WithMany("JournalEntries")
-                        .HasForeignKey("PatientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Patient");
-                });
-
             modelBuilder.Entity("PSYCare.Database.Entities.MoodEntry", b =>
                 {
                     b.HasOne("PSYCare.Database.Entities.Patient", "Patient")
@@ -244,8 +212,6 @@ namespace PSYCare.Migrations
 
             modelBuilder.Entity("PSYCare.Database.Entities.Patient", b =>
                 {
-                    b.Navigation("JournalEntries");
-
                     b.Navigation("MoodEntries");
                 });
 
