@@ -36,7 +36,7 @@ public class PsychologistsController: ControllerBase
         });
     }
 
-    [HttpGet("{psychologistId}/get-patients")]
+    [HttpGet("get-patients/{psychologistId}")]
     public async Task<IActionResult> GetPatientsForPsychologist(int psychologistId)
     {
         var patients = await _psychologistsService.GetPatientsForPsychologist(psychologistId);
