@@ -10,7 +10,7 @@ public class Patient
     public int? PsychologistId { get; set; }
     public string? Location { get; set; }
     public string? IssueDescription { get; set; }
+    public int Age { get; set; }
     public string? Diagnosis { get; set; }
     public string? PsychologistNotes { get; set; }
-    public int Age { get; set; }
 }

@@ -33,8 +33,6 @@ public class PatientsService : IPatientsService
             Location = dbUser.Location,
             PsychologistId = dbUser.PsychologistId,
             IssueDescription = dbUser.IssueDescription,
-            Diagnosis = dbUser.Diagnosis,
-            PsychologistNotes = dbUser.PsychologistNotes,
             Age = dbUser.Age
         };
     }
@@ -118,5 +116,29 @@ public class PatientsService : IPatientsService
         await _context.SaveChangesAsync();
 
         return true;
+    }
+
+    public async Task<Patient?> UpdatePatientAsync(int patientId, string? diagnosis, string? psychologistNotes)
+    {
+        var patient = await _context.Patients.FindAsync(patientId);
+        if (patient == null)
+        {
+            return null;
+        }
+        patient.Diagnosis = diagnosis ?? patient.Diagnosis;
+        patient.PsychologistNotes = psychologistNotes ?? patient.PsychologistNotes;
+        await _context.SaveChangesAsync();
+        return new Patient
+        {
+            Id = patient.Id,
+            Email = patient.Email,
+            Name = patient.Name,
+            PhoneNumber = patient.PhoneNumber,
+            Location = patient.Location,
+            IssueDescription = patient.IssueDescription,
+            Age = patient.Age,
+            Diagnosis = patient.Diagnosis,
+            PsychologistNotes = patient.PsychologistNotes
+        };
     }
 }

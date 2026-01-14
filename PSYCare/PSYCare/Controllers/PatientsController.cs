@@ -55,6 +55,21 @@ public class PatientsController: ControllerBase
         return Ok(patient);
     }
 
+    [HttpPut("update-patient/{patientId}")]
+    public async Task<IActionResult> UpdatePatient(int patientId, [FromBody] UpdatePatientRequest request)
+    {
+        var updatedPatient = await _patientsService.UpdatePatientAsync(patientId, request.Diagnosis,request.PsychologistNotes);
+        if (updatedPatient == null)
+        {
+            return NotFound();
+        }
+        return Ok(new
+        {
+            type = "patient",
+            data = updatedPatient
+        });
+    }
+
     [HttpGet("{patientId}/get-psychologist")]
     public async Task<IActionResult> GetPsychologistForPatient(int patientId)
     {
