@@ -104,4 +104,15 @@ public class PatientsService : IPatientsService
 
         return true;
     }
+
+    public async Task<Patient?> UpdatePatientAsync(int patientId, string diagnosis, string psychologistNotes)
+    {
+        var patient = await _context.Patients.FindAsync(patientId);
+        if (patient == null)
+        {
+            return null;
+        }
+       
+        patient.
+    }
 }
