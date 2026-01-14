@@ -44,6 +44,17 @@ public class PatientsController: ControllerBase
         });
     }
 
+    [HttpGet("get-patient/{patientId}")]
+    public async Task<IActionResult> GetPatientById(int patientId)
+    {
+        var patient = await _patientsService.GetPatientByIdAsync(patientId);
+        if (patient == null)
+        {
+            return NotFound();
+        }
+        return Ok(patient);
+    }
+
     [HttpPut("{patientId}/update-patient")]
     public async Task<IActionResult> UpdatePatient(int patientId, [FromBody] UpdatePatientRequest request)
     {
@@ -68,6 +79,17 @@ public class PatientsController: ControllerBase
             return NotFound();
         }
         return Ok(psychologist);
+    }
+
+    [HttpDelete("delete-patient/{patientId}")]
+    public async Task<IActionResult> DeletePatient(int patientId)
+    {
+        var ok =  await _patientsService.DeletePatientAsync(patientId);
+        if (!ok)
+        {
+            return NotFound();
+        }
+        return Ok(new { message = "Patient deleted successfully." });
     }
 
     [HttpPost("{patientId}/assign-psychologist")]

@@ -10,6 +10,9 @@ public class Patient
     public string PhoneNumber { get; set; }
     public string? Location { get; set; }
     public string? IssueDescription { get; set; }
+
+    public string? Diagnosis { get; set; }
+    public string? PsychologistNotes { get; set; }
     public int Age { get; set; }
 
     public Psychologist? Psychologist { get; set; }
