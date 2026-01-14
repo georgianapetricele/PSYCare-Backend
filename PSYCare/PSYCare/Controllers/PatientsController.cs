@@ -55,7 +55,7 @@ public class PatientsController: ControllerBase
         return Ok(patient);
     }
 
-    [HttpPut("{patientId}/update-patient")]
+    [HttpPut("update-patient/{patientId}")]
     public async Task<IActionResult> UpdatePatient(int patientId, [FromBody] UpdatePatientRequest request)
     {
         var updatedPatient = await _patientsService.UpdatePatientAsync(patientId, request.Diagnosis,request.PsychologistNotes);

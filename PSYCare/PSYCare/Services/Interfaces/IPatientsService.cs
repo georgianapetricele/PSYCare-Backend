@@ -9,6 +9,5 @@ public interface IPatientsService
     Task<Psychologist?> GetPsychologistForPatientAsync(int patientId);
     Task<bool> AssignPsychologistToPatientAsync(int patientId, string psychologistEmail);
     Task<bool> DeletePatientAsync(int patientId);
-
     Task<Patient?> UpdatePatientAsync(int patientId, string diagnosis, string psychologistNotes);
 }
