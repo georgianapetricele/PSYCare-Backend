@@ -27,6 +27,7 @@ public class PatientsService : IPatientsService
 
         return new Patient
         {
+            Id = dbUser.Id,
             Email = dbUser.Email,
             Name = dbUser.Name,
             PhoneNumber = dbUser.PhoneNumber,
