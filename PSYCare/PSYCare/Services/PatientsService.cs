@@ -7,35 +7,12 @@ using DbPatient = PSYCare.Database.Entities.Patient;
 
 namespace PSYCare.Services;
 
-public class PatientsService : IPatientsService
+public class PatientsService(PSYCareDbContext context) : IPatientsService
 {
-    private readonly PSYCareDbContext _context;
-
-    public PatientsService(PSYCareDbContext context)
-    {
-        _context = context;
-    }
-
     public async Task<Patient?> GetPatientByIdAsync(int userId)
     {
-        var dbUser = await _context.Patients.FindAsync(userId);
-
-        if (dbUser == null)
-        {
-            return null;
-        }
-
-        return new Patient
-        {
-            Id = dbUser.Id,
-            Email = dbUser.Email,
-            Name = dbUser.Name,
-            PhoneNumber = dbUser.PhoneNumber,
-            Location = dbUser.Location,
-            PsychologistId = dbUser.PsychologistId,
-            IssueDescription = dbUser.IssueDescription,
-            Age = dbUser.Age
-        };
+        var dbUser = await context.Patients.FindAsync(userId);
+        return dbUser is null ? null : MapToModel(dbUser);
     }
 
     public async Task<Patient?> CreatePatientAsync(Patient user)
@@ -51,95 +28,86 @@ public class PatientsService : IPatientsService
             Password = user.Password
         };
 
-        _context.Patients.Add(dbUser);
-        await _context.SaveChangesAsync();
+        context.Patients.Add(dbUser);
+        await context.SaveChangesAsync();
 
-        // map DB -> Service model
-        return new Patient
-        {
-            Id = dbUser.Id, // ID generat de PostgreSQL
-            Email = dbUser.Email,
-            Name = dbUser.Name,
-            PhoneNumber = dbUser.PhoneNumber,
-            Location = dbUser.Location,
-            IssueDescription = dbUser.IssueDescription,
-            Age = dbUser.Age
-        };
+        return MapToModel(dbUser);
     }
 
     public async Task<Psychologist?> GetPsychologistForPatientAsync(int patientId)
     {
-        var psychologist = await _context.Patients
+        return await context.Patients
             .Where(p => p.Id == patientId)
-            .Select(p => p.Psychologist)
+            .Select(p => p.Psychologist == null ? null : new Psychologist
+            {
+                Email = p.Psychologist.Email,
+                Name = p.Psychologist.Name,
+                Location = p.Psychologist.Location
+            })
             .FirstOrDefaultAsync();
-
-        if (psychologist == null)
-            return null;
-
-        return new Psychologist
-        {
-            Email = psychologist.Email,
-            Name = psychologist.Name,
-            Location = psychologist.Location
-        };
     }
 
     public async Task<bool> DeletePatientAsync(int patientId)
     {
-        var patient = await _context.Patients.FindAsync(patientId);
-        if (patient == null)
+        var patient = await context.Patients.FindAsync(patientId);
+        if (patient is null)
         {
             return false;
         }
+
         patient.PsychologistId = null;
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
         return true;
     }
 
     public async Task<bool> AssignPsychologistToPatientAsync(int patientId, string psychologistEmail)
     {
-        var patient = await _context.Patients.FindAsync(patientId);
-        if (patient == null)
+        var patient = await context.Patients.FindAsync(patientId);
+        if (patient is null)
         {
             return false;
         }
 
-        var psychologist = await _context.Psychologists
+        var psychologist = await context.Psychologists
             .FirstOrDefaultAsync(p => p.Email == psychologistEmail);
 
-        if (psychologist == null)
+        if (psychologist is null)
         {
             return false;
         }
 
         patient.PsychologistId = psychologist.Id;
-        await _context.SaveChangesAsync();
+        await context.SaveChangesAsync();
 
         return true;
     }
 
     public async Task<Patient?> UpdatePatientAsync(int patientId, string? diagnosis, string? psychologistNotes)
     {
-        var patient = await _context.Patients.FindAsync(patientId);
-        if (patient == null)
+        var patient = await context.Patients.FindAsync(patientId);
+        if (patient is null)
         {
             return null;
         }
-        patient.Diagnosis = diagnosis ?? patient.Diagnosis;
-        patient.PsychologistNotes = psychologistNotes ?? patient.PsychologistNotes;
-        await _context.SaveChangesAsync();
-        return new Patient
-        {
-            Id = patient.Id,
-            Email = patient.Email,
-            Name = patient.Name,
-            PhoneNumber = patient.PhoneNumber,
-            Location = patient.Location,
-            IssueDescription = patient.IssueDescription,
-            Age = patient.Age,
-            Diagnosis = patient.Diagnosis,
-            PsychologistNotes = patient.PsychologistNotes
-        };
+
+        if (diagnosis is not null) patient.Diagnosis = diagnosis;
+        if (psychologistNotes is not null) patient.PsychologistNotes = psychologistNotes;
+
+        await context.SaveChangesAsync();
+        return MapToModel(patient);
     }
+
+    private static Patient MapToModel(DbPatient dbUser) => new()
+    {
+        Id = dbUser.Id,
+        Email = dbUser.Email,
+        Name = dbUser.Name,
+        PhoneNumber = dbUser.PhoneNumber,
+        Location = dbUser.Location,
+        PsychologistId = dbUser.PsychologistId,
+        IssueDescription = dbUser.IssueDescription,
+        Age = dbUser.Age,
+        Diagnosis = dbUser.Diagnosis,
+        PsychologistNotes = dbUser.PsychologistNotes
+    };
 }

@@ -1,0 +1,50 @@
+Ú
+WE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\LoginTest.csPSYCare.TestN
+PSYCare.Test.LoginTest4LoginAsync_WithPatientCredentials_ReturnsPatientRoleX
+PSYCare.Test.LoginTest>LoginAsync_WithPsychologistCredentials_ReturnsPsychologistRoleG
+PSYCare.Test.LoginTest-LoginAsync_WithInvalidCredentials_ReturnsNull‡
+WE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\MoodTests.csPSYCare.Test;
+PSYCare.Test.MoodTests!CreateAsync_ShouldCreateMoodEntryJ
+PSYCare.Test.MoodTests0CreateAsync_InvalidScore_ThrowsArgumentExceptionH
+PSYCare.Test.MoodTests.ListAsync_ShouldReturnEntriesInDescendingOrder;
+PSYCare.Test.MoodTests!UpdateAsync_ShouldUpdateMoodEntry;
+PSYCare.Test.MoodTests!DeleteAsync_ShouldRemoveMoodEntryQ
+PSYCare.Test.MoodTests7DeleteAsync_NonExistingEntry_ThrowsKeyNotFoundException˜
+ZE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\JournalTests.csPSYCare.Test:
+PSYCare.Test.JournalTestsCreateAsync_ShouldCreateEntryV
+PSYCare.Test.JournalTests9CreateAsync_NonExistingPatient_ThrowsKeyNotFoundExceptionK
+PSYCare.Test.JournalTests.ListAsync_ShouldReturnEntriesInDescendingOrder9
+PSYCare.Test.JournalTestsUpdateAsync_ShouldUpdateText:
+PSYCare.Test.JournalTestsDeleteAsync_ShouldRemoveEntryT
+PSYCare.Test.JournalTests7DeleteAsync_NonExistingEntry_ThrowsKeyNotFoundException¡	
+ZE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\PatientTests.csPSYCare.TestJ
+PSYCare.Test.PatientTests-CreatePatientAsync_ShouldReturnCreatedPatientS
+PSYCare.Test.PatientTests6GetPatientByIdAsync_WithExistingPatient_ReturnsPatientS
+PSYCare.Test.PatientTests6GetPatientByIdAsync_WithNonExistingPatient_ReturnsNullS
+PSYCare.Test.PatientTests6UpdatePatientAsync_WithValidData_ReturnsUpdatedPatientR
+PSYCare.Test.PatientTests5UpdatePatientAsync_WithNonExistingPatient_ReturnsNullO
+PSYCare.Test.PatientTests2DeletePatientAsync_WithExistingPatient_ReturnsTrueS
+PSYCare.Test.PatientTests6DeletePatientAsync_WithNonExistingPatient_ReturnsFalseW
+PSYCare.Test.PatientTests:AssignPsychologistToPatientAsync_WithValidData_ReturnsTruea
+PSYCare.Test.PatientTestsDAssignPsychologistToPatientAsync_WithNonExistingPatient_ReturnsFalsef
+PSYCare.Test.PatientTestsIAssignPsychologistToPatientAsync_WithNonExistingPsychologist_ReturnsFalseh
+PSYCare.Test.PatientTestsKGetPsychologistForPatientAsync_WithAssignedPsychologist_ReturnsPsychologistb
+PSYCare.Test.PatientTestsEGetPsychologistForPatientAsync_WithNoPsychologistAssigned_ReturnsNullÎ
+`E:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\PsychologistsTests.csPSYCare.TestZ
+PSYCare.Test.PsychologistsTests7CreatePsychologistAsync_ShouldReturnCreatedPsychologisth
+PSYCare.Test.PsychologistsTestsEGetPsychologistByIdAsync_WithExistingPsychologist_ReturnsPsychologistc
+PSYCare.Test.PsychologistsTests@GetPsychologistByIdAsync_WithNonExistingPsychologist_ReturnsNullS
+PSYCare.Test.PsychologistsTests0GetAllPsychologistsAsync_ReturnsAllPsychologists`
+PSYCare.Test.PsychologistsTests=GetAllPsychologistsAsync_WithNoPsychologists_ReturnsEmptyList^
+PSYCare.Test.PsychologistsTests;GetPatientsForPsychologist_WithAssignedPatients_ReturnsListX
+PSYCare.Test.PsychologistsTests5GetPatientsForPsychologist_WithNoPatients_ReturnsNulle
+PSYCare.Test.PsychologistsTestsBGetPatientsForPsychologist_WithNonExistingPsychologist_ReturnsNullY
+PSYCare.Test.PsychologistsTests6GetPatientsForPsychologist_ReturnsOnlyAssignedPatientsý
+ZE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\SessionTests.csPSYCare.Test<
+PSYCare.Test.SessionTestsCreateAsync_ShouldCreateSessionT
+PSYCare.Test.SessionTests7CreateAsync_InvalidPatientId_ThrowsKeyNotFoundExceptionL
+PSYCare.Test.SessionTests/GetByPatientIdAsync_ShouldReturnPatientSessions=
+PSYCare.Test.SessionTests GetByIdAsync_ShouldReturnSessionN
+PSYCare.Test.SessionTests1ConfirmSessionAsync_ShouldUpdateStatusToConfirmedM
+PSYCare.Test.SessionTests0CancelSessionAsync_ShouldUpdateStatusToCancelledQ
+PSYCare.Test.SessionTests4GetByPsychologistIdAsync_ShouldReturnOrderedSessions

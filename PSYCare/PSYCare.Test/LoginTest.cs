@@ -31,10 +31,10 @@ namespace PSYCare.Test
             _context.SaveChanges();
 
             _context.Patients.Add(new Patient { Id = 1, Email = "patient@test.com", Password = "1234", Name = "name", PhoneNumber = "Phone" });
-            _context.Psychologists.Add(new Psychologist { Id = 1, Email = "psy@test.com", Password = "abcd", Name = "name"});
+            _context.Psychologists.Add(new Psychologist { Id = 1, Email = "psy@test.com", Password = "abcd", Name = "name" });
             _context.SaveChanges();
 
-            _authService = new AuthService(_context);
+            _authService = new AuthService(_context, null, null);
         }
 
         [TearDown]

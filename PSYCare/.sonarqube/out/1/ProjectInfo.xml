@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>PSYCare.Test</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Test</ProjectType>
+  <ProjectGuid>9b0fc412-c54c-4bf4-809d-fc475d6af77c</ProjectGuid>
+  <FullPath>E:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\PSYCare.Test.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResultFiles>
+    <AnalysisResultFile Id="FilesToAnalyze" Location="E:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\.sonarqube\conf\1\FilesToAnalyze.txt" />
+  </AnalysisResultFiles>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">E:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\.sonarqube\out\1\Issues.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">E:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\.sonarqube\out\1</Property>
+    <Property Name="sonar.cs.scanner.telemetry">E:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\.sonarqube\out\1\Telemetry.json</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>net8.0</TargetFramework>
+</ProjectInfo>
