@@ -11,20 +11,14 @@ public class AuthService(
 {
     public async Task<object?> LoginAsync(string email, string password)
     {
-        var patient = await context.Patients
-            .FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
-
-        if (patient is not null)
-        {
-            return new { role = "patient", data = patient };
-        }
-
-        var psychologist = await context.Psychologists
-            .FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
-
-        return psychologist is not null
-            ? new { role = "psychologist", data = psychologist }
-            : null;
+        return (object?)await context.Patients
+            .Where(x => x.Email == email && x.Password == password)
+            .Select(x => new { role = "patient", data = x })
+            .FirstOrDefaultAsync()
+            ?? await context.Psychologists
+            .Where(x => x.Email == email && x.Password == password)
+            .Select(x => new { role = "psychologist", data = x })
+            .FirstOrDefaultAsync();
     }
 
     public async Task<object?> GetUserByIdAsync(int id)

@@ -8,7 +8,7 @@ namespace PSYCare.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CrisisController : Controller
+    public class CrisisController : ControllerBase
     {
         private readonly ICrisisService _crisisService;
 

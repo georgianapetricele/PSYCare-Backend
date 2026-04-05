@@ -24,10 +24,10 @@ public class PsychologistsService : IPsychologistsService
             : MapToServiceModel(dbUser);
     }
 
-    public async Task<List<Patient>?> GetPatientsForPsychologist(int id)
+    public async Task<List<Patient>?> GetPatientsForPsychologist(int Id)
     {
         var patients = await _context.Patients
-            .Where(p => p.PsychologistId == id)
+            .Where(p => p.PsychologistId == Id)
             .Select(p => MapToPatientModel(p))
             .ToListAsync();
 

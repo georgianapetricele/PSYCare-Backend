@@ -1,17 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using PSYCare.Controllers.Models;
-using PSYCare.Services;
 using PSYCare.Services.Interfaces;
 
 namespace PSYCare.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PatientsController(IPatientsService patientsService, IMoodService moodService, IJournalService journalService) : ControllerBase
+public class PatientsController(IPatientsService patientsService) : ControllerBase
 {
     private readonly IPatientsService _patientsService = patientsService;
-    private readonly IMoodService _moodService = moodService;
-    private readonly IJournalService _journalService = journalService;
 
     [HttpPost("add-patient")]
     public async Task<IActionResult> CreatePatient([FromBody] CreatePatientRequest request)
@@ -41,7 +38,10 @@ public class PatientsController(IPatientsService patientsService, IMoodService m
     [HttpPut("update-patient/{patientId}")]
     public async Task<IActionResult> UpdatePatient(int patientId, [FromBody] UpdatePatientRequest request)
     {
-        var updatedPatient = await _patientsService.UpdatePatientAsync(patientId, request.Diagnosis, request.PsychologistNotes);
+        var diagnosis = request.Diagnosis ?? string.Empty;
+        var psychologistNotes = request.PsychologistNotes ?? string.Empty;
+
+        var updatedPatient = await _patientsService.UpdatePatientAsync(patientId, diagnosis, psychologistNotes);
         return updatedPatient is null
             ? NotFound()
             : Ok(new { type = "patient", data = updatedPatient });
@@ -73,78 +73,5 @@ public class PatientsController(IPatientsService patientsService, IMoodService m
         }
 
         return Ok(new { message = "Psychologist assigned successfully." });
-    }
-
-    [HttpPost("{patientId}/moods")]
-    public Task<IActionResult> CreateMood(int patientId, [FromBody] MoodEntryCreateDto dto)
-        => SafeExecute(async () =>
-        {
-            var created = await _moodService.CreateAsync(patientId, dto);
-            return CreatedAtAction(nameof(GetMoods), new { patientId }, created);
-        });
-
-    [HttpGet("{patientId}/moods")]
-    public async Task<ActionResult<IReadOnlyList<MoodEntryResponseDto>>> GetMoods(int patientId, [FromQuery] int limit = 50)
-    {
-        var list = await _moodService.ListAsync(patientId, limit);
-        return Ok(list);
-    }
-
-    [HttpPut("{patientId}/moods/{moodId}")]
-    public Task<IActionResult> UpdateMood(int patientId, int moodId, [FromBody] MoodEntryCreateDto dto)
-        => SafeExecute(async () =>
-        {
-            await _moodService.UpdateAsync(patientId, moodId, dto);
-            return NoContent();
-        });
-
-    [HttpDelete("{patientId}/moods/{moodId}")]
-    public Task<IActionResult> DeleteMood(int patientId, int moodId)
-        => SafeExecute(async () =>
-        {
-            await _moodService.DeleteAsync(patientId, moodId);
-            return NoContent();
-        });
-
-    [HttpPost("{patientId}/journals")]
-    public Task<IActionResult> CreateJournal(int patientId, [FromBody] JournalEntryCreateDto dto)
-        => SafeExecute(async () =>
-        {
-            var created = await _journalService.CreateAsync(patientId, dto);
-            return CreatedAtAction(nameof(GetJournals), new { patientId }, created);
-        });
-
-    [HttpGet("{patientId}/journals")]
-    public async Task<ActionResult<IReadOnlyList<JournalEntryResponseDto>>> GetJournals(int patientId, [FromQuery] int limit = 50)
-    {
-        var list = await _journalService.ListAsync(patientId, limit);
-        return Ok(list);
-    }
-
-    [HttpPut("{patientId}/journals/{journalId}")]
-    public Task<IActionResult> UpdateJournal(int patientId, int journalId, [FromBody] JournalEntryCreateDto dto)
-        => SafeExecute(async () =>
-        {
-            await _journalService.UpdateAsync(patientId, journalId, dto);
-            return NoContent();
-        });
-
-    [HttpDelete("{patientId}/journal/{journalId}")]
-    public Task<IActionResult>
-        DeleteJournal(int patientId, int journalId)
-        => SafeExecute(async () =>
-        {
-            await _journalService.DeleteAsync(patientId, journalId);
-            return NoContent();
-        });
-
-    private static async Task<IActionResult> SafeExecute(Func<Task<IActionResult>> action)
-    {
-        try
-        {
-            return await action();
-        }
-        catch (ArgumentException ex) { return new BadRequestObjectResult(ex.Message); }
-        catch (KeyNotFoundException ex) { return new NotFoundObjectResult(ex.Message); }
     }
 }

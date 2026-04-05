@@ -19,7 +19,12 @@ namespace PSYCare.Services
 
         public void Remove(int psychologistId) => _sockets.TryRemove(psychologistId, out _);
 
-        public bool TryGet(int psychologistId, out WebSocket socket) => _sockets.TryGetValue(psychologistId, out socket);
+        public bool TryGet(int psychologistId, out WebSocket socket)
+        {
+            var result = _sockets.TryGetValue(psychologistId, out var foundSocket);
+            socket = foundSocket ?? throw new InvalidOperationException("WebSocket not found.");
+            return result;
+        }
 
         public async Task SendNotificationAsync(int psychologistId, string message)
         {
