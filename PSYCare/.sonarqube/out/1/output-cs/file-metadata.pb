@@ -1,0 +1,11 @@
+ƒ
+xE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\obj\Debug\net8.0\PSYCare.Test.AssemblyInfo.csutf-8–
+ŠE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8…
+zE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\obj\Debug\net8.0\PSYCare.Test.GlobalUsings.g.csutf-8`
+WE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\MoodTests.csutf-8c
+ZE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\JournalTests.csutf-8€
+uC:\Users\Cristina\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8c
+ZE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\PatientTests.csutf-8`
+WE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\LoginTest.csutf-8i
+`E:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\PsychologistsTests.csutf-8c
+ZE:\Master\Sem1\Requirements\Prototype\PSYCare-Backend\PSYCare\PSYCare.Test\SessionTests.csutf-8

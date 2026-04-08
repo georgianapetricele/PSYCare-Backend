@@ -1,28 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using PSYCare.Controllers.Models;
-using PSYCare.Services;
 using PSYCare.Services.Interfaces;
 
 namespace PSYCare.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class PatientsController: ControllerBase
+public class PatientsController(IPatientsService patientsService) : ControllerBase
 {
-    IPatientsService _patientsService;
-    private readonly IMoodService _moodService;
-    private readonly IJournalService _journalService;
+    private readonly IPatientsService _patientsService = patientsService;
 
-
-    public PatientsController(IPatientsService patientsService, IMoodService moodService, IJournalService journalService)
-    {
-        _patientsService = patientsService;
-        _moodService = moodService;
-        _journalService = journalService;
-    }
-
-    [HttpPost]
-    [Route("add-patient")]
+    [HttpPost("add-patient")]
     public async Task<IActionResult> CreatePatient([FromBody] CreatePatientRequest request)
     {
         var user = new Services.Models.Patient
@@ -37,55 +25,39 @@ public class PatientsController: ControllerBase
         };
 
         var patient = await _patientsService.CreatePatientAsync(user);
-        return Ok(new
-        {
-            type = "patient",
-            data = patient
-        });
+        return Ok(new { type = "patient", data = patient });
     }
 
     [HttpGet("get-patient/{patientId}")]
     public async Task<IActionResult> GetPatientById(int patientId)
     {
         var patient = await _patientsService.GetPatientByIdAsync(patientId);
-        if (patient == null)
-        {
-            return NotFound();
-        }
-        return Ok(patient);
+        return patient is null ? NotFound() : Ok(patient);
     }
 
     [HttpPut("update-patient/{patientId}")]
     public async Task<IActionResult> UpdatePatient(int patientId, [FromBody] UpdatePatientRequest request)
     {
-        var updatedPatient = await _patientsService.UpdatePatientAsync(patientId, request.Diagnosis,request.PsychologistNotes);
-        if (updatedPatient == null)
-        {
-            return NotFound();
-        }
-        return Ok(new
-        {
-            type = "patient",
-            data = updatedPatient
-        });
+        var diagnosis = request.Diagnosis ?? string.Empty;
+        var psychologistNotes = request.PsychologistNotes ?? string.Empty;
+
+        var updatedPatient = await _patientsService.UpdatePatientAsync(patientId, diagnosis, psychologistNotes);
+        return updatedPatient is null
+            ? NotFound()
+            : Ok(new { type = "patient", data = updatedPatient });
     }
 
     [HttpGet("{patientId}/get-psychologist")]
     public async Task<IActionResult> GetPsychologistForPatient(int patientId)
     {
         var psychologist = await _patientsService.GetPsychologistForPatientAsync(patientId);
-        if (psychologist == null)
-        {
-            return NotFound();
-        }
-        return Ok(psychologist);
+        return psychologist is null ? NotFound() : Ok(psychologist);
     }
 
     [HttpDelete("delete-patient/{patientId}")]
     public async Task<IActionResult> DeletePatient(int patientId)
     {
-        var ok =  await _patientsService.DeletePatientAsync(patientId);
-        if (!ok)
+        if (!await _patientsService.DeletePatientAsync(patientId))
         {
             return NotFound();
         }
@@ -95,128 +67,11 @@ public class PatientsController: ControllerBase
     [HttpPost("{patientId}/assign-psychologist")]
     public async Task<IActionResult> AssignPsychologistToPatient(int patientId, [FromBody] AssignPsychologistRequest request)
     {
-        var psychologistEmail = request.PsychologistEmail;
-        var ok = await _patientsService.AssignPsychologistToPatientAsync(patientId, psychologistEmail);
-        
-        if (!ok)
+        if (!await _patientsService.AssignPsychologistToPatientAsync(patientId, request.PsychologistEmail))
         {
             return NotFound("Patient or Psychologist not found.");
         }
 
         return Ok(new { message = "Psychologist assigned successfully." });
-    }
-
-    [HttpPost("{patientId}/moods")]
-    public async Task<ActionResult<MoodEntryResponseDto>> CreateMood(int patientId, [FromBody] MoodEntryCreateDto dto)
-    {
-        try
-        {
-            var created = await _moodService.CreateAsync(patientId, dto);
-            return CreatedAtAction(nameof(GetMoods), new { patientId }, created);
-        }
-        catch (ArgumentException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
-        }
-    }
-
-    [HttpGet("{patientId}/moods")]
-    public async Task<ActionResult<IReadOnlyList<MoodEntryResponseDto>>> GetMoods(int patientId, [FromQuery] int limit = 50)
-    {
-        var list = await _moodService.ListAsync(patientId, limit);
-        return Ok(list);
-    }
-
-    [HttpPut("{patientId}/moods/{moodId}")]
-    public async Task<IActionResult> UpdateMood(int patientId, int moodId, [FromBody] MoodEntryCreateDto dto)
-    {
-        try
-        {
-            await _moodService.UpdateAsync(patientId, moodId, dto);
-            return NoContent();
-        }
-        catch (ArgumentException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
-        }
-    }
-
-    [HttpDelete("{patientId}/moods/{moodId}")]
-    public async Task<IActionResult> DeleteMood(int patientId, int moodId)
-    {
-        try
-        {
-            await _moodService.DeleteAsync(patientId, moodId);
-            return NoContent();
-        }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
-        }
-    }
-
-    [HttpPost("{patientId}/journals")]
-    public async Task<ActionResult<JournalEntryResponseDto>> CreateJournal(int patientId, [FromBody] JournalEntryCreateDto dto)
-    {
-        try
-        {
-            var created = await _journalService.CreateAsync(patientId, dto);
-            return CreatedAtAction(nameof(GetJournals), new { patientId }, created);
-        }
-        catch (ArgumentException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
-        }
-    }
-
-    [HttpGet("{patientId}/journals")]
-    public async Task<ActionResult<IReadOnlyList<MoodEntryResponseDto>>> GetJournals(int patientId, [FromQuery] int limit = 50)
-    {
-        var list = await _journalService.ListAsync(patientId, limit);
-        return Ok(list);
-    }
-
-    [HttpPut("{patientId}/journals/{journalId}")]
-    public async Task<IActionResult> UpdateJournal(int patientId, int journalId, [FromBody] JournalEntryCreateDto dto)
-    {
-        try
-        {
-            await _journalService.UpdateAsync(patientId, journalId, dto);
-            return NoContent();
-        }
-        catch (ArgumentException ex)
-        {
-            return BadRequest(ex.Message);
-        }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
-        }
-    }
-
-    [HttpDelete("{patientId}/journal/{journalId}")]
-    public async Task<IActionResult> DeleteJournal(int patientId, int journalId)
-    {
-        try
-        {
-            await _journalService.DeleteAsync(patientId, journalId);
-            return NoContent();
-        }
-        catch (KeyNotFoundException ex)
-        {
-            return NotFound(ex.Message);
-        }
     }
 }

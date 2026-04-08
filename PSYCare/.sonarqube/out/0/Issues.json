@@ -1,0 +1,2854 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.9.0.0",
+        "fileVersion": "4.9.0-3.24067.18 (4fc721bb)",
+        "semanticVersion": "4.9.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Patients' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/PSYCareDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 12,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/PSYCareDbContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 27,
+                  "endLine": 13,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Psychologists' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/PSYCareDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 12,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/PSYCareDbContext.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 32,
+                  "endLine": 14,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Sessions' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/PSYCareDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 12,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/PSYCareDbContext.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 27,
+                  "endLine": 16,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'JournalEntries' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/PSYCareDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 12,
+                  "endLine": 8,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/PSYCareDbContext.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 32,
+                  "endLine": 17,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8601",
+          "level": "warning",
+          "message": "Possible null reference assignment.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/WebSocketService.cs",
+                "region": {
+                  "startLine": 22,
+                  "startColumn": 114,
+                  "endLine": 22,
+                  "endColumn": 120
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Psychologist.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Psychologist.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Psychologist.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Psychologist.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Psychologist.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Psychologist.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Patient.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Patient.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Patient.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 19,
+                  "endLine": 8,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Patient.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 19,
+                  "endLine": 8,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Patient.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 19,
+                  "endLine": 9,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Patient.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 19,
+                  "endLine": 9,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'PhoneNumber' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Patient.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 19,
+                  "endLine": 10,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/Entities/Patient.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 19,
+                  "endLine": 10,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/LoginRequest.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/LoginRequest.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/LoginRequest.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/LoginRequest.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePsychologistRequest.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 19,
+                  "endLine": 5,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePsychologistRequest.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 19,
+                  "endLine": 5,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePsychologistRequest.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePsychologistRequest.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePsychologistRequest.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePsychologistRequest.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePatientRequest.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePatientRequest.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 23,
+                  "endLine": 5,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePatientRequest.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePatientRequest.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 23,
+                  "endLine": 6,
+                  "endColumn": 28
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePatientRequest.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePatientRequest.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 23,
+                  "endLine": 7,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'PhoneNumber' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePatientRequest.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePatientRequest.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 23,
+                  "endLine": 8,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'PsychologistEmail' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/AssignPsychologistRequest.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 19,
+                  "endLine": 5,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/AssignPsychologistRequest.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 19,
+                  "endLine": 5,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'diagnosis' in 'Task<Patient?> IPatientsService.UpdatePatientAsync(int patientId, string diagnosis, string psychologistNotes)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 83,
+                  "endLine": 44,
+                  "endColumn": 100
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8604",
+          "level": "warning",
+          "message": "Possible null reference argument for parameter 'psychologistNotes' in 'Task<Patient?> IPatientsService.UpdatePatientAsync(int patientId, string diagnosis, string psychologistNotes)'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 44,
+                  "startColumn": 102,
+                  "endLine": 44,
+                  "endColumn": 127
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Psychologist.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Psychologist.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Psychologist.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Psychologist.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Psychologist.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 19,
+                  "endLine": 8,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Psychologist.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 19,
+                  "endLine": 8,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Name' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Patient.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Patient.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 19,
+                  "endLine": 6,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Email' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Patient.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Patient.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 19,
+                  "endLine": 7,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'PhoneNumber' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Patient.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 19,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Patient.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 19,
+                  "endLine": 8,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Password' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Patient.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 19,
+                  "endLine": 9,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/Models/Patient.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 19,
+                  "endLine": 9,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2068",
+          "level": "warning",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/appsettings.json",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 27,
+                  "endLine": 10,
+                  "endColumn": 101
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'FK_Patients_Psychologists_PsychologistId' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 23,
+                  "endLine": 14,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 23,
+                  "endLine": 57,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 23,
+                  "endLine": 68,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 117,
+                  "startColumn": 23,
+                  "endLine": 117,
+                  "endColumn": 65
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Patients' 16 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 24,
+                  "endLine": 19,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 24,
+                  "endLine": 23,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 24,
+                  "endLine": 27,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 32,
+                  "startColumn": 24,
+                  "endLine": 32,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 40,
+                  "startColumn": 24,
+                  "endLine": 40,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 24,
+                  "endLine": 49,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 24,
+                  "endLine": 58,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 69,
+                  "startColumn": 24,
+                  "endLine": 69,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 24,
+                  "endLine": 73,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 78,
+                  "startColumn": 24,
+                  "endLine": 78,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 24,
+                  "endLine": 88,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 97,
+                  "startColumn": 24,
+                  "endLine": 97,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 106,
+                  "startColumn": 24,
+                  "endLine": 106,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 24,
+                  "endLine": 112,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 118,
+                  "startColumn": 24,
+                  "endLine": 118,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "10": null,
+              "11": null,
+              "12": null,
+              "13": null,
+              "14": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null,
+              "7": null,
+              "8": null,
+              "9": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Pacients' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 23,
+                  "endLine": 15,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 109,
+                  "startColumn": 23,
+                  "endLine": 109,
+                  "endColumn": 33
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 136,
+                  "startColumn": 24,
+                  "endLine": 136,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 142,
+                  "startColumn": 24,
+                  "endLine": 142,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'PsychologistId' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 23,
+                  "endLine": 31,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 25,
+                  "endLine": 59,
+                  "endColumn": 41
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 23,
+                  "endLine": 77,
+                  "endColumn": 39
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 119,
+                  "startColumn": 25,
+                  "endLine": 119,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'integer' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 33,
+                  "startColumn": 23,
+                  "endLine": 33,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 26,
+                  "endLine": 36,
+                  "endColumn": 35
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 23,
+                  "endLine": 79,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108123930_UpdateEntitiesFields.cs",
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 26,
+                  "endLine": 83,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Psychologists' 8 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 24,
+                  "endLine": 19,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 24,
+                  "endLine": 28,
+                  "endColumn": 39
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 41,
+                  "endLine": 57,
+                  "endColumn": 56
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 64,
+                  "startColumn": 24,
+                  "endLine": 64,
+                  "endColumn": 39
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 24,
+                  "endLine": 88,
+                  "endColumn": 39
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 92,
+                  "startColumn": 24,
+                  "endLine": 92,
+                  "endColumn": 39
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 101,
+                  "startColumn": 24,
+                  "endLine": 101,
+                  "endColumn": 39
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 130,
+                  "startColumn": 41,
+                  "endLine": 130,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null,
+              "5": null,
+              "6": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'integer' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107162242_CreatePacientPsychologist.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 50,
+                  "endLine": 21,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107162242_CreatePacientPsychologist.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 50,
+                  "endLine": 37,
+                  "endColumn": 59
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107162242_CreatePacientPsychologist.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 51,
+                  "endLine": 46,
+                  "endColumn": 60
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107162242_CreatePacientPsychologist.cs",
+                "region": {
+                  "startLine": 47,
+                  "startColumn": 62,
+                  "endLine": 47,
+                  "endColumn": 71
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107162242_CreatePacientPsychologist.cs",
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 50,
+                  "endLine": 84,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'character varying(100)' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 23,
+                  "endLine": 20,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 55,
+                  "endLine": 42,
+                  "endColumn": 79
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 26,
+                  "endLine": 96,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 118,
+                  "startColumn": 55,
+                  "endLine": 118,
+                  "endColumn": 79
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Pacients' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107162242_CreatePacientPsychologist.cs",
+                "region": {
+                  "startLine": 34,
+                  "startColumn": 23,
+                  "endLine": 34,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107162242_CreatePacientPsychologist.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 24,
+                  "endLine": 61,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107162242_CreatePacientPsychologist.cs",
+                "region": {
+                  "startLine": 67,
+                  "startColumn": 24,
+                  "endLine": 67,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107162242_CreatePacientPsychologist.cs",
+                "region": {
+                  "startLine": 75,
+                  "startColumn": 23,
+                  "endLine": 75,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Email' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 23,
+                  "endLine": 27,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 65,
+                  "startColumn": 25,
+                  "endLine": 65,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 71,
+                  "startColumn": 25,
+                  "endLine": 71,
+                  "endColumn": 32
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 100,
+                  "startColumn": 23,
+                  "endLine": 100,
+                  "endColumn": 30
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 137,
+                  "startColumn": 25,
+                  "endLine": 137,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'character varying(256)' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 29,
+                  "startColumn": 23,
+                  "endLine": 29,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 43,
+                  "startColumn": 56,
+                  "endLine": 43,
+                  "endColumn": 80
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 105,
+                  "startColumn": 26,
+                  "endLine": 105,
+                  "endColumn": 50
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 115,
+                  "startColumn": 56,
+                  "endLine": 115,
+                  "endColumn": 80
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Patients' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 23,
+                  "endLine": 36,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 70,
+                  "startColumn": 24,
+                  "endLine": 70,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 24,
+                  "endLine": 76,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 23,
+                  "endLine": 84,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'integer' 6 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 39,
+                  "startColumn": 50,
+                  "endLine": 39,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 62,
+                  "endLine": 41,
+                  "endColumn": 71
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 51,
+                  "endLine": 49,
+                  "endColumn": 60
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 112,
+                  "startColumn": 50,
+                  "endLine": 112,
+                  "endColumn": 59
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 114,
+                  "startColumn": 51,
+                  "endLine": 114,
+                  "endColumn": 60
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260107183811_AddRelationPatientPsychologist.cs",
+                "region": {
+                  "startLine": 122,
+                  "startColumn": 62,
+                  "endLine": 122,
+                  "endColumn": 71
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null,
+              "4": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Sessions' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260110190005_AddSessionsTable.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 23,
+                  "endLine": 16,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260110190005_AddSessionsTable.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 24,
+                  "endLine": 46,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260110190005_AddSessionsTable.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 24,
+                  "endLine": 51,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260110190005_AddSessionsTable.cs",
+                "region": {
+                  "startLine": 59,
+                  "startColumn": 23,
+                  "endLine": 59,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'Patients' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260113212019_UpdateFieldsPatient.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 24,
+                  "endLine": 15,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260113212019_UpdateFieldsPatient.cs",
+                "region": {
+                  "startLine": 21,
+                  "startColumn": 24,
+                  "endLine": 21,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260113212019_UpdateFieldsPatient.cs",
+                "region": {
+                  "startLine": 31,
+                  "startColumn": 24,
+                  "endLine": 31,
+                  "endColumn": 34
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260113212019_UpdateFieldsPatient.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 24,
+                  "endLine": 35,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S101",
+          "level": "warning",
+          "message": "Rename class 'PSYCareDbContext' to match pascal case naming rules, consider using 'PsyCareDbContext'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Database/PSYCareDbContext.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 14,
+                  "endLine": 6,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/SessionDto.cs",
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 20,
+                  "endLine": 5,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/SessionDto.cs",
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 20,
+                  "endLine": 6,
+                  "endColumn": 34
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/SessionDto.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 25,
+                  "endLine": 7,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6961",
+          "level": "warning",
+          "message": "Inherit from ControllerBase instead of Controller.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/CrisisController.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 37,
+                  "endLine": 11,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/CreatePatientRequest.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 20,
+                  "endLine": 12,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1861",
+          "level": "note",
+          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Migrations/20260108164849_AddMoodEntries.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 26,
+                  "endLine": 42,
+                  "endColumn": 60
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "paramName": "columns"
+            }
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/Models/MoodEntryCreateDto.cs",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 42,
+                  "endLine": 3,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6966",
+          "level": "warning",
+          "message": "Await RunAsync instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Program.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 1,
+                  "endLine": 88,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1481",
+          "level": "warning",
+          "message": "Remove the unused local variable 'webSocketClients'.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Program.cs",
+                "region": {
+                  "startLine": 41,
+                  "startColumn": 5,
+                  "endLine": 41,
+                  "endColumn": 21
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6960",
+          "level": "warning",
+          "message": "This controller has multiple responsibilities and could be split into 3 smaller controllers.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 14,
+                  "endLine": 10,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 110,
+                  "startColumn": 32,
+                  "endLine": 110,
+                  "endColumn": 45
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 134,
+                  "startColumn": 9,
+                  "endLine": 134,
+                  "endColumn": 22
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 118,
+                  "startColumn": 77,
+                  "endLine": 118,
+                  "endColumn": 88
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 32,
+                  "endLine": 125,
+                  "endColumn": 45
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 79,
+                  "startColumn": 32,
+                  "endLine": 79,
+                  "endColumn": 42
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 102,
+                  "startColumn": 32,
+                  "endLine": 102,
+                  "endColumn": 42
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 74,
+                  "endLine": 87,
+                  "endColumn": 82
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 94,
+                  "startColumn": 32,
+                  "endLine": 94,
+                  "endColumn": 42
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 38,
+                  "endLine": 68,
+                  "endColumn": 65
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 38,
+                  "endLine": 17,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 38,
+                  "endLine": 58,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 38,
+                  "endLine": 35,
+                  "endColumn": 52
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 38,
+                  "endLine": 51,
+                  "endColumn": 63
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Controllers/PatientsController.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 38,
+                  "endLine": 42,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": "May belong to responsibility #1.",
+              "1": "May belong to responsibility #1.",
+              "10": "May belong to responsibility #3.",
+              "11": "May belong to responsibility #3.",
+              "12": "May belong to responsibility #3.",
+              "13": "May belong to responsibility #3.",
+              "2": "May belong to responsibility #1.",
+              "3": "May belong to responsibility #1.",
+              "4": "May belong to responsibility #2.",
+              "5": "May belong to responsibility #2.",
+              "6": "May belong to responsibility #2.",
+              "7": "May belong to responsibility #2.",
+              "8": "May belong to responsibility #3.",
+              "9": "May belong to responsibility #3."
+            }
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'id' to 'Id' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///E:/Master/Sem1/Requirements/Prototype/PSYCare-Backend/PSYCare/PSYCare/Services/PsychologistsService.cs",
+                "region": {
+                  "startLine": 27,
+                  "startColumn": 70,
+                  "endLine": 27,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1861": {
+          "id": "CA1861",
+          "shortDescription": "Avoid constant arrays as arguments",
+          "fullDescription": "Constant arrays passed as arguments are not reused when called repeatedly, which implies a new array is created each time. Consider extracting them to 'static readonly' fields to improve performance if the passed array is not mutated within the called method.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1861",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS8601": {
+          "id": "CS8601",
+          "shortDescription": "Possible null reference assignment.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8601)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8604": {
+          "id": "CS8604",
+          "shortDescription": "Possible null reference argument.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8604)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S101": {
+          "id": "S101",
+          "shortDescription": "Types should be named in PascalCase",
+          "fullDescription": "Shared naming conventions allow teams to collaborate efficiently.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-101",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1481": {
+          "id": "S1481",
+          "shortDescription": "Unused local variables should be removed",
+          "fullDescription": "An unused local variable is a variable that has been declared but is not used anywhere in the block of code where it is defined. It is dead code, contributing to unnecessary complexity and leading to confusion when reading the code. Therefore, it should be removed from your code to maintain clarity and efficiency.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1481",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S2068": {
+          "id": "S2068",
+          "shortDescription": "Hard-coded credentials are security-sensitive",
+          "fullDescription": "Because it is easy to extract strings from an application source code or binary, credentials should not be hard-coded. This is particularly true for applications that are distributed or that are open-source.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-2068",
+          "properties": {
+            "category": "Blocker Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6960": {
+          "id": "S6960",
+          "shortDescription": "Controllers should not have mixed responsibilities",
+          "fullDescription": "ASP.NET controllers should not have mixed responsibilities. Following the Single Responsibility Principle (SRP), they should be kept lean and focused on a single, separate concern. In short, they should have a single reason to change.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6960",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6961": {
+          "id": "S6961",
+          "shortDescription": "API Controllers should derive from ControllerBase instead of Controller",
+          "fullDescription": "In ASP.NET Core, controllers usually inherit either from ControllerBase or Controller. If a controller does not use any View-specific functionality, it is recommended to inherit from ControllerBase.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6961",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6964": {
+          "id": "S6964",
+          "shortDescription": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "fullDescription": "\"Under-posting\" refers to a situation where a client sends less data than expected to the server during an HTTP request, for example when the client omits some properties from the request body that the server expects to receive.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6964",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6966": {
+          "id": "S6966",
+          "shortDescription": "Awaitable method should be used",
+          "fullDescription": "In an async method, any blocking operations should be avoided.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-6966",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S927": {
+          "id": "S927",
+          "shortDescription": "Parameter names should match base declaration and other partial definitions",
+          "fullDescription": "Parameters are part of the method signature and its identity.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-927",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

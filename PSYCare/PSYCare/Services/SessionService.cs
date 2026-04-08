@@ -17,15 +17,8 @@ namespace PSYCare.Services
 
         public async Task<SessionResponseDto> CreateAsync(SessionCreateDto dto)
         {
-            // Validate patient and psychologist exist
-            var patientExists = await _context.Patients.AnyAsync(p => p.Id == dto.PatientId);
-            var psychologistExists = await _context.Psychologists.AnyAsync(p => p.Id == dto.PsychologistId);
-
-            if (!patientExists)
-                throw new KeyNotFoundException($"Patient with ID {dto.PatientId} not found");
-
-            if (!psychologistExists)
-                throw new KeyNotFoundException($"Psychologist with ID {dto.PsychologistId} not found");
+            await EnsurePatientExists(dto.PatientId);
+            await EnsurePsychologistExists(dto.PsychologistId);
 
             var session = new Session
             {
@@ -33,7 +26,7 @@ namespace PSYCare.Services
                 PsychologistId = dto.PsychologistId,
                 ScheduledAt = dto.ScheduledAt,
                 Notes = dto.Notes,
-                Status = dto.Status,
+                Status = dto.Status
             };
 
             _context.Sessions.Add(session);
@@ -49,7 +42,7 @@ namespace PSYCare.Services
                 .OrderByDescending(s => s.ScheduledAt)
                 .ToListAsync();
 
-            return sessions.Select(MapToDto).ToList();
+            return sessions.Select(s => MapToDto(s)).ToList();
         }
 
         public async Task<IReadOnlyList<SessionResponseDto>> GetByPsychologistIdAsync(int psychologistId)
@@ -59,24 +52,18 @@ namespace PSYCare.Services
                 .OrderBy(s => s.ScheduledAt)
                 .ToListAsync();
 
-            return sessions.Select(MapToDto).ToList();
+            return sessions.Select(s => MapToDto(s)).ToList();
         }
 
         public async Task<SessionResponseDto> GetByIdAsync(int sessionId)
         {
-            var session = await _context.Sessions.FindAsync(sessionId);
-            if (session == null)
-                throw new KeyNotFoundException($"Session with ID {sessionId} not found");
-
+            var session = await GetSessionOrThrow(sessionId);
             return MapToDto(session);
         }
 
         public async Task ConfirmSessionAsync(int sessionId)
         {
-            var session = await _context.Sessions.FindAsync(sessionId);
-            if (session == null)
-                throw new KeyNotFoundException($"Session with ID {sessionId} not found");
-
+            var session = await GetSessionOrThrow(sessionId);
             session.Status = "confirmed";
 
             await _context.SaveChangesAsync();
@@ -84,26 +71,43 @@ namespace PSYCare.Services
 
         public async Task CancelSessionAsync(int sessionId)
         {
-            var session = await _context.Sessions.FindAsync(sessionId);
-            if (session == null)
-                throw new KeyNotFoundException($"Session with ID {sessionId} not found");
-
+            var session = await GetSessionOrThrow(sessionId);
             session.Status = "cancelled";
 
             await _context.SaveChangesAsync();
         }
 
-        private static SessionResponseDto MapToDto(Session session)
+        // ------------------ Guards ------------------
+
+        private async Task EnsurePatientExists(int patientId)
         {
-            return new SessionResponseDto
+            if (!await _context.Patients.AnyAsync(p => p.Id == patientId))
+                throw new KeyNotFoundException($"Patient with ID {patientId} not found");
+        }
+
+        private async Task EnsurePsychologistExists(int psychologistId)
+        {
+            if (!await _context.Psychologists.AnyAsync(p => p.Id == psychologistId))
+                throw new KeyNotFoundException($"Psychologist with ID {psychologistId} not found");
+        }
+
+        private async Task<Session> GetSessionOrThrow(int sessionId)
+        {
+            var session = await _context.Sessions.FindAsync(sessionId);
+            return session ?? throw new KeyNotFoundException($"Session with ID {sessionId} not found");
+        }
+
+        // ------------------ Mapping ------------------
+
+        private static SessionResponseDto MapToDto(Session session) =>
+            new()
             {
                 Id = session.Id,
                 PatientId = session.PatientId,
                 PsychologistId = session.PsychologistId,
                 ScheduledAt = session.ScheduledAt,
                 Status = session.Status,
-                Notes = session.Notes,
+                Notes = session.Notes
             };
-        }
     }
 }

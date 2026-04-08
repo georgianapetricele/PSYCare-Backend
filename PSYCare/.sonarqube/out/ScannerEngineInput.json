@@ -1,0 +1,136 @@
+{
+  "scannerProperties": [
+    {
+      "key": "sonar.scanner.app",
+      "value": "ScannerMSBuild"
+    },
+    {
+      "key": "sonar.scanner.appVersion",
+      "value": "11.2"
+    },
+    {
+      "key": "sonar.scanner.bootstrapStartTime",
+      "value": "1774715338000"
+    },
+    {
+      "key": "sonar.projectKey",
+      "value": "test"
+    },
+    {
+      "key": "sonar.working.directory",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.sonarqube\\out\\.sonar"
+    },
+    {
+      "key": "sonar.projectBaseDir",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare"
+    },
+    {
+      "key": "sonar.pullrequest.cache.basepath",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare"
+    },
+    {
+      "key": "sonar.sources",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.vs\\PSYCare\\v17\\DocumentLayout.json"
+    },
+    {
+      "key": "sonar.tests",
+      "value": ""
+    },
+    {
+      "key": "sonar.modules",
+      "value": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC,9B0FC412-C54C-4BF4-809D-FC475D6AF77C"
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.projectKey",
+      "value": "test:A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC"
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.projectName",
+      "value": "PSYCare"
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.projectBaseDir",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare"
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.working.directory",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.sonarqube\\out\\.sonar\\mod0"
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.sourceEncoding",
+      "value": "utf-8"
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.tests",
+      "value": ""
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.sources",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\AuthController.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\CrisisController.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\AssignPsychologistRequest.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\CreatePatientRequest.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\CreatePsychologistRequest.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\JournalEntryCreateDto.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\JournalEntryResponseDto.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\LoginRequest.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\MoodEntryCreateDto.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\MoodEntryResponseDto.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\SessionDto.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\Models\\UpdatePatientRequest.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\PatientsController.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\PsychologistsController.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Controllers\\SessionsController.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Database\\Configurations\\PsychologistConfiguration.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Database\\Entities\\JournalEntry.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Database\\Entities\\MoodEntry.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Database\\Entities\\Patient.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Database\\Entities\\Psychologist.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Database\\Entities\\Session.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Database\\PSYCareDbContext.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260107120424_CreateUser.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260107120424_CreateUser.Designer.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260107162242_CreatePacientPsychologist.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260107162242_CreatePacientPsychologist.Designer.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260107183811_AddRelationPatientPsychologist.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260107183811_AddRelationPatientPsychologist.Designer.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260108123930_UpdateEntitiesFields.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260108123930_UpdateEntitiesFields.Designer.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260108164849_AddMoodEntries.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260108164849_AddMoodEntries.Designer.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260110190005_AddSessionsTable.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260110190005_AddSessionsTable.Designer.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260111211720_Journal.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260111211720_Journal.Designer.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260113212019_UpdateFieldsPatient.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\20260113212019_UpdateFieldsPatient.Designer.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Migrations\\PSYCareDbContextModelSnapshot.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Program.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\AuthService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\CrisisService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\Interfaces\\IAuthService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\Interfaces\\ICrisisService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\Interfaces\\IJournalService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\Interfaces\\IMoodService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\Interfaces\\IPatientsService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\Interfaces\\IPsychologistsService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\Interfaces\\ISessionService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\JournalService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\Models\\Patient.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\Models\\Psychologist.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\MoodService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\PatientsService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\PsychologistsService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\SessionService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Services\\WebSocketService.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\obj\\Debug\\net8.0\\PSYCare.GlobalUsings.g.cs,\"E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs\",E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\obj\\Debug\\net8.0\\PSYCare.AssemblyInfo.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\obj\\Debug\\net8.0\\PSYCare.MvcApplicationPartsAssemblyInfo.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\appsettings.Development.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\appsettings.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\PSYCare.http,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\Properties\\launchSettings.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\obj\\project.assets.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\obj\\PSYCare.csproj.nuget.dgspec.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\bin\\Debug\\net8.0\\appsettings.Development.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\bin\\Debug\\net8.0\\appsettings.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\bin\\Debug\\net8.0\\PSYCare.deps.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\bin\\Debug\\net8.0\\PSYCare.runtimeconfig.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\obj\\Debug\\net8.0\\PSYCare.sourcelink.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare\\obj\\Debug\\net8.0\\staticwebassets.build.json"
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.cs.analyzer.projectOutPaths",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.sonarqube\\out\\0"
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.cs.roslyn.reportFilePaths",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.sonarqube\\out\\0\\Issues.json"
+    },
+    {
+      "key": "A9EB836C-6F0D-4CA2-ADEF-3EB3A73D23AC.sonar.cs.scanner.telemetry",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.sonarqube\\out\\0\\Telemetry.json"
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.projectKey",
+      "value": "test:9B0FC412-C54C-4BF4-809D-FC475D6AF77C"
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.projectName",
+      "value": "PSYCare.Test"
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.projectBaseDir",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test"
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.working.directory",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.sonarqube\\out\\.sonar\\mod1"
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.sourceEncoding",
+      "value": "utf-8"
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.sources",
+      "value": ""
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.tests",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\obj\\project.assets.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\obj\\PSYCare.Test.csproj.nuget.dgspec.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\bin\\Debug\\net8.0\\appsettings.Development.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\bin\\Debug\\net8.0\\appsettings.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\bin\\Debug\\net8.0\\PSYCare.deps.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\bin\\Debug\\net8.0\\PSYCare.runtimeconfig.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\bin\\Debug\\net8.0\\PSYCare.Test.deps.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\bin\\Debug\\net8.0\\PSYCare.Test.runtimeconfig.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\obj\\Debug\\net8.0\\PSYCare.Test.sourcelink.json,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\JournalTests.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\LoginTest.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\MoodTests.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\PatientTests.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\PsychologistsTests.cs,E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\PSYCare.Test\\SessionTests.cs"
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.cs.analyzer.projectOutPaths",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.sonarqube\\out\\1"
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.cs.roslyn.reportFilePaths",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.sonarqube\\out\\1\\Issues.json"
+    },
+    {
+      "key": "9B0FC412-C54C-4BF4-809D-FC475D6AF77C.sonar.cs.scanner.telemetry",
+      "value": "E:\\Master\\Sem1\\Requirements\\Prototype\\PSYCare-Backend\\PSYCare\\.sonarqube\\out\\1\\Telemetry.json"
+    },
+    {
+      "key": "sonar.token",
+      "value": "***"
+    },
+    {
+      "key": "sonar.host.url",
+      "value": "http://localhost:9000"
+    },
+    {
+      "key": "sonar.visualstudio.enable",
+      "value": "false"
+    }
+  ]
+}

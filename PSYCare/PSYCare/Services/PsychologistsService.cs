@@ -6,7 +6,7 @@ using DbPsychologist = PSYCare.Database.Entities.Psychologist;
 
 namespace PSYCare.Services;
 
-public class PsychologistsService: IPsychologistsService
+public class PsychologistsService : IPsychologistsService
 {
     private readonly PSYCareDbContext _context;
 
@@ -19,49 +19,49 @@ public class PsychologistsService: IPsychologistsService
     {
         var dbUser = await _context.Psychologists.FindAsync(userId);
 
-        if (dbUser == null)
-        {
-            return null;
-        }
-
-       
-
-        return new Psychologist
-        {
-            Email = dbUser.Email,
-            Name = dbUser.Name,
-            Location = dbUser.Location,
-            
-        };
+        return dbUser is null
+            ? null
+            : MapToServiceModel(dbUser);
     }
 
     public async Task<List<Patient>?> GetPatientsForPsychologist(int Id)
-    { 
-        var patientsForUser = await _context.Patients
-           .Where(p => p.PsychologistId == Id)
-           .Select(p => new Patient
-           {
-               Id = p.Id,
-               Email = p.Email,
-               Name = p.Name,
-               PhoneNumber = p.PhoneNumber,
-               Location = p.Location,
-               IssueDescription = p.IssueDescription,
-               Age = p.Age
-           })
-           .ToListAsync();
+    {
+        var patients = await _context.Patients
+            .Where(p => p.PsychologistId == Id)
+            .Select(p => MapToPatientModel(p))
+            .ToListAsync();
 
-        if (patientsForUser == null || patientsForUser.Count == 0)
-        {
-            return null;
-        }
-
-        return patientsForUser;
+        return patients.Count == 0 ? null : patients;
     }
 
     public async Task<Psychologist?> CreatePsychologistAsync(Psychologist user)
     {
-        var dbUser = new DbPsychologist
+        var dbUser = MapToDbModel(user);
+
+        _context.Psychologists.Add(dbUser);
+        await _context.SaveChangesAsync();
+
+        return MapToServiceModel(dbUser);
+    }
+
+    public async Task<List<Psychologist>> GetAllPsychologistsAsync() =>
+        await _context.Psychologists
+            .Select(p => MapToServiceModel(p))
+            .ToListAsync();
+
+    // ------------------ Mapping Methods ------------------
+
+    private static Psychologist MapToServiceModel(DbPsychologist dbUser) =>
+        new()
+        {
+            Id = dbUser.Id,
+            Email = dbUser.Email,
+            Name = dbUser.Name,
+            Location = dbUser.Location
+        };
+
+    private static DbPsychologist MapToDbModel(Psychologist user) =>
+        new()
         {
             Email = user.Email,
             Name = user.Name,
@@ -69,30 +69,15 @@ public class PsychologistsService: IPsychologistsService
             Password = user.Password
         };
 
-        _context.Psychologists.Add(dbUser);
-        await _context.SaveChangesAsync();
-
-        // map DB → Service model
-        return new Psychologist
+    private static Patient MapToPatientModel(Database.Entities.Patient p) =>
+        new()
         {
-            Id = dbUser.Id, // ID generat de DB
-            Email = dbUser.Email,
-            Name = dbUser.Name,
-            Location = dbUser.Location
+            Id = p.Id,
+            Email = p.Email,
+            Name = p.Name,
+            PhoneNumber = p.PhoneNumber,
+            Location = p.Location,
+            IssueDescription = p.IssueDescription,
+            Age = p.Age
         };
-    }
-
-    public async Task<List<Psychologist>> GetAllPsychologistsAsync()
-    {
-        var psychologists = await _context.Psychologists
-            .Select(p => new Psychologist
-            {
-                Email = p.Email,
-                Name = p.Name,
-                Location = p.Location
-            })
-            .ToListAsync();
-
-        return psychologists;
-    }
 }

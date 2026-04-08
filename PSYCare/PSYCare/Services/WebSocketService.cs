@@ -1,6 +1,4 @@
-﻿
-
-using System.Collections.Concurrent;
+﻿using System.Collections.Concurrent;
 using System.Net.WebSockets;
 
 namespace PSYCare.Services
@@ -10,6 +8,7 @@ namespace PSYCare.Services
         void Add(int psychologistId, WebSocket socket);
         void Remove(int psychologistId);
         bool TryGet(int psychologistId, out WebSocket socket);
+        Task SendNotificationAsync(int psychologistId, string message);
     }
 
     public class WebSocketService : IWebSocketService
@@ -20,6 +19,20 @@ namespace PSYCare.Services
 
         public void Remove(int psychologistId) => _sockets.TryRemove(psychologistId, out _);
 
-        public bool TryGet(int psychologistId, out WebSocket socket) => _sockets.TryGetValue(psychologistId, out socket);
+        public bool TryGet(int psychologistId, out WebSocket socket)
+        {
+            var result = _sockets.TryGetValue(psychologistId, out var foundSocket);
+            socket = foundSocket ?? throw new InvalidOperationException("WebSocket not found.");
+            return result;
+        }
+
+        public async Task SendNotificationAsync(int psychologistId, string message)
+        {
+            if (_sockets.TryGetValue(psychologistId, out var socket) && socket.State == WebSocketState.Open)
+            {
+                var bytes = System.Text.Encoding.UTF8.GetBytes(message);
+                await socket.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, CancellationToken.None);
+            }
+        }
     }
 }

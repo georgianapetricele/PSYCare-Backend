@@ -4,28 +4,36 @@ using PSYCare.Services.Interfaces;
 
 namespace PSYCare.Services;
 
-public class AuthService: IAuthService
+public class AuthService(
+    PSYCareDbContext context,
+    IPatientsService patientsService,
+    IPsychologistsService psychologistsService) : IAuthService
 {
-    private readonly PSYCareDbContext _context;
-
-    public AuthService(PSYCareDbContext context)
-    {
-        _context = context;
-    }
-
     public async Task<object?> LoginAsync(string email, string password)
     {
-       var patient = await _context.Patients
-            .FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
+        return (object?)await context.Patients
+            .Where(x => x.Email == email && x.Password == password)
+            .Select(x => new { role = "patient", data = x })
+            .FirstOrDefaultAsync()
+            ?? await context.Psychologists
+            .Where(x => x.Email == email && x.Password == password)
+            .Select(x => new { role = "psychologist", data = x })
+            .FirstOrDefaultAsync();
+    }
 
-        if (patient != null)
-            return new { role = "patient", data = patient };
+    public async Task<object?> GetUserByIdAsync(int id)
+    {
+        var psychologist = await psychologistsService.GetPsychologistByIdAsync(id);
+        if (psychologist is not null)
+        {
+            return new { type = "psychologist", data = psychologist };
+        }
 
-        var psychologist = await _context.Psychologists
-            .FirstOrDefaultAsync(x => x.Email == email && x.Password == password);
-
-        if (psychologist != null)
-            return new { role = "psychologist", data = psychologist };
+        var patient = await patientsService.GetPatientByIdAsync(id);
+        if (patient is not null)
+        {
+            return new { type = "patient", data = patient };
+        }
 
         return null;
     }

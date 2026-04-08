@@ -8,36 +8,25 @@ namespace PSYCare.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class CrisisController : Controller
+    public class CrisisController : ControllerBase
     {
-        private readonly IPatientsService _patientsService;
-        private readonly IWebSocketService _wsManager;
+        private readonly ICrisisService _crisisService;
 
-        public CrisisController(IPatientsService patientsService, IWebSocketService wsManager)
+        public CrisisController(ICrisisService crisisService)
         {
-            _patientsService = patientsService;
-            _wsManager = wsManager;
+            _crisisService = crisisService;
         }
 
         [HttpPost]
         [Route("crisis/{pacientId}")]
         public async Task<IActionResult> Crisis(int pacientId)
         {
-            var pacient = await _patientsService.GetPatientByIdAsync(pacientId);
-            if (pacient == null) return NotFound();
-
-            var psychologistId = pacient.PsychologistId;
-
-            if (psychologistId.HasValue && _wsManager.TryGet(psychologistId.Value, out var ws))
+            if (!await _crisisService.NotifyPsychologistOfCrisisAsync(pacientId))
             {
-                var message = $"Pacient {pacient.Name} has pressed the crisis button! Give your pacient a call: {pacient.PhoneNumber}";
-                var bytes = System.Text.Encoding.UTF8.GetBytes(message);
-                await ws.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, CancellationToken.None);
+                return NotFound();
             }
 
             return Ok(new { message = "Psychologist notified via WebSocket" });
         }
-
-
     }
 }
